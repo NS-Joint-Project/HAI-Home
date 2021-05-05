@@ -1,1 +1,7 @@
-<h3>Welcome back</h3>
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<a href="{% url 'go' %}" class="btn btn-primary " tabindex="-1" role="button" aria-disabled="true">外出する</a>
+{% endblock content %}
