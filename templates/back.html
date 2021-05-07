@@ -1,9 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block header %}
+<div class="jumbotron jumbotron-fluid bg-warning text-white">
+    <div class="container">
+        <h1 class="display-4">Home</h1>
+        <p class="lead">家で楽しく過ごそう!!!!</p>
+    </div>
+</div>
+{% endblock header %}
 
 {% block content %}
-<h3>引かれる値:{{object.return_time}}</h3>
-<h3>引く値:{{object.departure_time}}</h3>
-<h3>{{user.username}}の外出時間:{{object.out_time}}</h3>
+<div class=container>
+    <h1>おかえり！</h1>
+    <h3>{{user.username}}の外出時間:{{object.out_time}}秒</h3>
+    <p><a href="{% url 'logout' %}">logout</a></p>
+</div>
 {% endblock content %}

@@ -1,7 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block header %}
+<div class="jumbotron jumbotron-fluid bg-warning text-white">
+    <div class="container">
+        <h1 class="display-4">Home</h1>
+        <p class="lead">家で楽しく過ごそう!!!!</p>
+    </div>
+</div>
+{% endblock header %}
 
 {% block content %}
-<a href="{% url 'go' %}" class="btn btn-primary " tabindex="-1" role="button" aria-disabled="true">外出する</a>
+<div class=container>
+    <a href="{% url 'go' %}" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">外出する</a>
+    <a href="{% url 'logout' %}" >logout</a>
+</div>
 {% endblock content %}
